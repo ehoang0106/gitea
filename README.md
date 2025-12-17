@@ -48,6 +48,7 @@ docker-compose restart    # Restart
 ```
 
 ### SSH Set Up
+gittea is configured to use port 222 for SSH connections.
 
 To get the ssh authentication working, you need to add the following to your `~/.ssh/config` file (create one if it doesn't exist):
 
