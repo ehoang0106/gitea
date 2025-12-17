@@ -46,3 +46,16 @@ docker-compose down       # Stop
 docker-compose logs -f    # View logs
 docker-compose restart    # Restart
 ```
+
+### SSH Set Up
+
+To get the ssh authentication working, you need to add the following to your `~/.ssh/config` file (create one if it doesn't exist):
+
+```
+```bash
+asd
+```
+```
+
+```
+```
