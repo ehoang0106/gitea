@@ -1,0 +1,48 @@
+# Gitea Docker Setup
+
+Docker Compose configuration for running [Gitea](https://gitea.io/), a self-hosted Git service.
+
+## Prerequisites
+
+- Docker and Docker Compose
+- MySQL database
+
+## Quick Start
+
+1. Copy the environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` with your MySQL credentials:
+   ```
+   DB_HOST=your_mysql_host
+   DB_NAME=gitea
+   DB_USER=your_db_user
+   DB_PASSWORD=your_db_password
+   ```
+
+3. Start Gitea:
+   ```bash
+   docker-compose up -d
+   ```
+
+4. Access at http://localhost:3000
+
+## Ports
+
+- **3000**: Web interface
+- **222**: SSH for Git operations
+
+## Data
+
+All data is stored in the `./gitea` directory.
+
+## Commands
+
+```bash
+docker-compose up -d      # Start
+docker-compose down       # Stop
+docker-compose logs -f    # View logs
+docker-compose restart    # Restart
+```
