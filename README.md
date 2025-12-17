@@ -52,10 +52,12 @@ docker-compose restart    # Restart
 To get the ssh authentication working, you need to add the following to your `~/.ssh/config` file (create one if it doesn't exist):
 
 ```
-```bash
-asd
 ```
-```
+Host [your-gitea-host]
+  HostName [your-gitea-domain-or-ip]
+  User git
+  Port 222
+  IdentityFile [the-path-to-your-ssh-private-key]
+  IdentitiesOnly yes
 
-```
 ```
