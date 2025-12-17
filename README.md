@@ -52,13 +52,11 @@ gitea uses port 222 for SSH connections.
 To get the ssh authentication working, you need to add the following to your `~/.ssh/config` file (create one if it doesn't exist):
 
 ```
-```
+
 Host [your-gitea-host]
   HostName [your-gitea-domain-or-ip]
   User git
   Port 222
   IdentityFile [the-path-to-your-ssh-private-key]
   IdentitiesOnly yes
-
-```
 ```
