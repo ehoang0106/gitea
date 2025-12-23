@@ -1,0 +1,19 @@
+services:
+  gitea-runner:
+    image: gitea/act_runner:latest
+    container_name: gitea-runner
+    restart: unless-stopped
+    environment:
+      GITEA_INSTANCE_URL: ${GITEA_INSTANCE_URL} #example: "https://gitea.khoah.net"
+      GITEA_RUNNER_REGISTRATION_TOKEN: ${GITEA_RUNNER_REGISTRATION_TOKEN} #"your token here, create on gitea dashboard setting or gitea cli"
+      GITEA_RUNNER_NAME: "docker-runner-01" #name of the runner
+      GITEA_RUNNER_LABELS: "ubuntu-latest,docker" #labels for the runner
+    volumes:
+      - ./runner-data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - gitea
+
+networks:
+  gitea:
+    external: false
