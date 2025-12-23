@@ -61,3 +61,15 @@ Host [your-gitea-host]
   IdentityFile [the-path-to-your-ssh-private-key]
   IdentitiesOnly yes
 ```
+
+Example:
+
+```
+Host gitea.khoah.net
+  HostName gitea.khoah.net
+  User git
+  Port 222
+  IdentityFile /home/khoa/.ssh/gitea_key
+  IdentitiesOnly yes
+```
+
